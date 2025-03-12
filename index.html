@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Smart Contract Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" aria-label="Toggle Theme">
+            <span class="icon">☀️</span>
+        </button>
+    </header>
+
+    <main class="container">
+        <h1>Token Smart Contract Generator</h1>
+        <p>Create an ERC-20 token smart contract with custom parameters and features.</p>
+
+        <div class="utm-generator">
+<div class="form-group">
+    <label for="token-name">Token Name* (e.g., MyToken):</label>
+    <input type="text" id="token-name" placeholder="MyToken" required>
+
+    <label for="token-symbol">Token Symbol* (e.g., MTK):</label>
+    <input type="text" id="token-symbol" placeholder="MTK" required>
+
+    <label for="total-supply">Total Supply* (e.g., 1000000):</label>
+    <input type="number" id="total-supply" placeholder="1000000" min="1" required>
+
+    <label for="decimals">Decimals* (e.g., 18):</label>
+    <input type="number" id="decimals" placeholder="18" min="0" max="18" required>
+
+    <label>Additional Features:</label>
+    <div class="switch-group">
+        <label class="switch-label">
+            <input type="checkbox" id="mintable">
+            <span class="switch">
+                <span class="switch-inner"></span>
+            </span>
+            Mintable (allow creating new tokens)
+        </label>
+        <label class="switch-label">
+            <input type="checkbox" id="burnable">
+            <span class="switch">
+                <span class="switch-inner"></span>
+            </span>
+            Burnable (allow destroying tokens)
+        </label>
+        <label class="switch-label">
+            <input type="checkbox" id="pausable">
+            <span class="switch">
+                <span class="switch-inner"></span>
+            </span>
+            Pausable (allow pausing transfers)
+        </label>
+    </div>
+
+    <button id="generate-contract" class="generate-btn">Generate Contract</button>
+</div>
+            <div class="utm-output">
+                <span id="contract-status">Your generated contract will appear here</span>
+                <button id="download-sol" class="copy-btn" disabled>Download Solidity (.sol)</button>
+            </div>
+        </div>
+
+        <p>Want to see the code? Check it out on GitHub: <a href="https://github.com/Dev-Geniy/Token-Contract-Generator" target="_blank">https://github.com/Dev-Geniy/Token-Contract-Generator</a></p>
+        <p class="note">Note: Replace the link above with your own GitHub repository URL in the HTML file.</p>
+    </main>
+
+    <footer class="footer">
+        <div class="social">
+            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-twitter-x-3d-icon-download-in-png-blend-fbx-gltf-file-formats--logo-network-social-media-pack-logos-icons-8050016.png?f=webp" alt="Twitter Icon" class="twitter-icon">
+            <div>
+                <a href="https://twitter.com/HotDog850642" target="_blank">@HotDog850642</a>
+                <p>I'm a code developer. Feel free to reach out!</p>
+            </div>
+        </div>
+        <div class="donation">
+            <h3>For voluntary donations</h3>
+            <div class="btc-address">
+                <span id="btc-code">bc1q3r5gad7dxc276ael06n02gek7ncm536hpndgmq</span>
+                <button class="copy-btn" data-target="btc-code">Copy</button>
+            </div>
+            <p class="thanks">Thank you for your support!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
